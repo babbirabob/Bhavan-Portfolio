@@ -1,0 +1,403 @@
+:root {
+  --skin-color: #1ab2b8e8;
+}
+/* Flex container for education and experience */
+.education-experience {
+  display: flex;
+  flex-direction: column;
+}
+
+.education, .experience {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  /* On mobile devices, reorder the sections */
+  .education-experience {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .education {
+    order: 1;
+  }
+
+  .experience {
+    order: 2;
+  }
+}
+
+@media (min-width: 769px) {
+  /* On larger screens, keep the default order */
+  .education-experience {
+    display: flex;
+    flex-direction: row;
+    gap: 30px; /* Adjust space between items */
+  }
+
+  .education, .experience {
+    flex: 1;
+  }
+}
+
+/* project section*/
+/* Basic Reset for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 60px 0;
+  background-color: #f9f9f900;
+}
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 2.5em;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Project Container */
+.project-container {
+  max-width: 80%; /* Set the maximum width of the container */
+  margin: 0 auto; /* Center the container */
+  width: 80%; /* Adjust width to be responsive */
+  padding: 0 20px; /* Add padding to ensure content doesn’t touch the edges */
+}
+
+/* Project Row */
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Add space between projects */
+}
+
+/* Project Item */
+.project-item {
+  flex: 1;
+  min-width: 300px; /* Ensures the item is not too narrow on small screens */
+}
+
+/* Different Size Classes for Project Boxes */
+.project-box {
+  background-color: #fff;
+  padding: 20px; /* Adjust padding for content */
+  border-radius: 12px; /* Increased border radius for rounded corners */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow for a lighter effect */
+  transition: box-shadow 0.3s ease;
+  height: auto; /* Default height adjusts based on content */
+  margin-bottom: 30px; /* Increased space below each project box */
+  margin-left: 20px; /* Add space to the left of each project box */
+}
+
+/* Specific Sizes */
+.project-box.small {
+  width: 200px; /* Width for small boxes */
+  height: 150px; /* Height for small boxes */
+}
+
+.project-box.medium {
+  width: 300px; /* Width for medium boxes */
+  height: 200px; /* Height for medium boxes */
+}
+
+.project-box.large {
+  width: 400px; /* Width for large boxes */
+  height: 300px; /* Height for large boxes */
+}
+
+/* Ensure the first item in each row has no extra left margin */
+.project-item:first-child .project-box {
+  margin-left: 0; /* Remove left margin for the first item in each row */
+}
+
+.project-box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow on hover */
+}
+
+.project-box h3 {
+  font-size: 1.6em; /* Reduced font size */
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-box p {
+  font-size: 0.9em; /* Reduced font size */
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.project-box ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.project-box ul li {
+  font-size: 0.9em; /* Reduced font size */
+  color: #444;
+  margin-bottom: 8px;
+}
+
+/* GitHub Button */
+.btn {
+  display: inline-block;
+  padding: 8px 16px; /* Adjusted padding */
+  font-size: 0.9em; /* Reduced font size */
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Medium Screens */
+@media (max-width: 768px) {
+  .project-container {
+    width: 700px; /* Adjust container width for medium screens */
+    padding: 10px;
+  }
+
+  .project-box {
+    padding: 15px;
+    padding-left: 20px; /* Adjust left padding */
+    margin-left: auto; /* Ensure the box stays centered */
+    margin-right: auto; /* Ensure the box stays centered */
+  }
+
+  .section-title h2 {
+    font-size: 2em; /* Adjust font size for section title */
+  }
+}
+
+/* Small Screens */
+@media (max-width: 576px) {
+  .project-container {
+    width: 100%; /* Full width for small screens */
+    padding: 10px; /* Ensure padding around the container */
+  }
+
+  .project-box {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 15px; /* Adjust padding inside the box */
+    margin: 0 auto; /* Center the project box */
+  }
+
+  .project-box h3 {
+    font-size: 1.4em; /* Adjust font size for small screens */
+  }
+
+  .project-box p {
+    font-size: 0.8em; /* Adjust font size for small screens */
+  }
+
+  .project-box ul li {
+    font-size: 0.8em; /* Adjust font size for list items */
+  }
+
+  .btn {
+    padding: 6px 12px; /* Adjust padding for small screens */
+    font-size: 0.8em; /* Adjust font size for buttons */
+  }
+}
+
+/*the education sector*/
+/* Basic styles */
+.section {
+  padding: 15px;
+}
+
+.timeline-box {
+  padding: 0;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.circle-dot {
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.timeline-date,
+.timeline-title,
+.timeline-text {
+  font-size: 14px;
+}
+
+.timeline-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.timeline-title {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 20px; /* Space between sections */
+  }
+
+  .education, .experience {
+    width: 700px;;
+  }
+  
+  .timeline-item {
+    text-align: center;
+  }
+  
+  .circle-dot {
+    margin: 0 auto;
+  }
+
+  .timeline-date,
+  .timeline-title,
+  .timeline-text {
+    font-size: 12px;
+  }
+
+  .section-title h2 {
+    font-size: 18px;
+  }
+}
+/* General styling */
+
+/* Mobile and Tablet Specific */
+.mobile-img {
+  display: none; /* Hide on larger screens */
+}
+
+/* Mobile (Phones) */
+@media (max-width: 576px) {
+  .home {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Center-align items */
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .home-info {
+    padding: 15px; /* Adjust padding for mobile */
+    font-family: 'Courier New', Courier, monospace;
+  }
+  h3.hello span{
+    font-family:'times';
+  }
+  h3.my-profession{
+    font-family:"times";
+  }
+  .home-img {
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .home-img img {
+    width: 90%; /* Make image slightly larger on mobile */
+    max-width: 300px;
+    max-height: height 50px; /* Limit width for smaller screens */
+  }
+
+  .mobile-img {
+    display: block; /* Show mobile image on mobile screens */
+    margin-top: 20px; /* Space between name and mobile image */
+  }
+
+  .mobile-img img {
+    width: 90%; /* Adjust width for mobile */
+    height: 200%; /* Maintain aspect ratio */
+    max-height: 300px; /* Limit height for mobile */
+   
+    border-radius: 10px; /* Adjust border radius */
+    display: block; /* Ensure the image is displayed as a block */
+    
+  }
+}
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column; /* Stack items vertically on tablets */
+   /* Center-align items */
+  }
+
+  .home-info {
+    padding: 20px; /* Adjust padding for tablets */
+  }
+
+  .home-img {
+    padding: 10px; /* Adjust padding for tablets */
+  }
+
+  .home-img img {
+    width: 80%; /* Make image slightly smaller on tablets */
+    max-width: 350px; /* Limit width for tablets */
+  }
+
+  .mobile-img {
+    display: block; /* Show mobile image on tablets */
+    margin-top: 20px; /* Space between name and mobile image */
+  }
+
+  .mobile-img img {
+    width: 70%; /* Adjust width for tablets */
+    height: 300px; /* Maintain aspect ratio */
+    max-height: 400px; /* Limit height for tablets */
+    border-radius: 10px;
+    border-radius: 10px; /* Adjust border radius */
+    display: block; /* Ensure the image is displayed as a block */
+    margin: 0 auto; /* Center-align image */
+    padding: left -20px;
+  }
+}
+@media (max-width: 576px) {
+  .social-icon {
+    font-size: 20px; /* Reduce icon size */
+    margin: 5px; /* Reduce space between icons */
+  }
+
+  .social-media {
+    padding-left: 10px; /* Adjust gap on the left side for phones */
+  }
+}
+
+/* Tablet-specific styling */
+@media (max-width: 768px) {
+  .social-icon {
+    font-size: 22px; /* Slightly smaller than on desktop */
+    margin: -2px; /* Reduce space between icons */
+  }
+
+  .social-media {
+    padding-left: 15px; /* Adjust gap on the left side for tablets */
+  }
+}
